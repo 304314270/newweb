@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>登录/注册</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">   -->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://at.alicdn.com/t/font_677124_bzid8kskqjs.css">
+	<link rel="stylesheet" href="base.css">
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- 背景图 -->
+<div class="bg-wrap" id="bg-wrap">
+
+	<!-- 登录板块 -->
+	<div class="login-box">
+		<ul class="login-content">
+			<li><img src="img/logo.jpg" alt="logo"></li>
+			<li class="bg-1 pt-2 pb-2 mt-5	text-left"><i class="iconfont icon-gerenzhongxin- ml-2 mr-2 text-primary"></i><input type="text" placeholder="请输入用户名"></li>
+			<li class="bg-1 pt-2 pb-2 mt-2 text-left"><i class="iconfont icon-mima1 ml-2 mr-2 text-primary"></i><input type="password" placeholder="请输入密码"></li>
+			<li class="mt-4">
+				<button type="button" class="btn btn-primary pl-5 pr-5">登录</button>
+			</li>
+			<li class="mt-2">
+				<button type="button" class="btn btn-outline-primary pl-5 pr-5" @click="isgoReg=true">注册</button>
+			</li>
+			<li class="mt-2 font-2">
+				<span class="mr-1"><i class="iconfont icon-weixin"></i> 微信登录</span>
+				<span><i class="iconfont icon-qq2"></i> QQ登录</span>
+			</li>
+		</ul>	
+	</div>
+	<!-- 注册板块 -->
+	<div class="register bg-1 p-4" :class="{ goReg : isgoReg}">
+		<div><b @click="isgoReg=false"><i class="iconfont icon-shuangyoujiantou- color-1 font-5"></i></b></div>
+		<div class="form-title">用户注册-</div>
+		<form action="" class="form-content mt-4">
+			<div class="form-item" :class="[ number == 0 ? ' goFi' : 'toTop' ]">
+				<div class="form-group">
+					<label for="usr" class="color-1">用户名:</label>
+					<input type="text" class="form-control" id="usr" placeholder="请输入用户名">
+				</div>
+				<div class="form-group">
+					<label for="pwd" class="color-1">密码:</label>
+					<input type="password" class="form-control" id="pwd" placeholder="请输入密码">
+				</div>
+				<div class="form-group">
+					<label for="email" class="color-1">Email:</label>
+					<input type="email" class="form-control" id="email" placeholder="请输入邮箱">
+				</div>
+				<div class="form-check">
+					<label class="form-check-label color-1">
+						<input class="form-check-input" type="checkbox"> Remember me
+					</label>
+				</div>
+				<div class="next mt-2"><button type="button" class="btn btn-primary " @click="number++">下一页</button></div>
+
+			</div>
+			<div class="form-item"  :class="[ number == 1 ? ' goFi' : '' ]">
+				<div class="form-group">
+					<label for="usr" class="color-1">地址:</label>	
+					<input type="text" class="form-control" id="usr" placeholder="请输入用户名地址">
+				</div>
+				<div class="form-group">
+					<label for="pwd" class="color-1">密码:</label>
+					<input type="password" class="form-control" id="pwd" placeholder="请输入密码">
+				</div>
+				<div class="form-group">
+					<label for="email" class="color-1">Email:</label>
+					<input type="email" class="form-control" id="email" placeholder="请输入邮箱">
+				</div>
+				<div class="next mt-2">
+					<button type="button" class="btn btn-primary " @click="number--">上一页</button>
+				</div>
+				<div class="mt-4"><button type="submit" class="btn btn-primary btn-block">提交</button></div>
+			</div>
+			
+		</form>
+	</div>
+
+</div>
+</body>
+</html>
+<script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+<script>
+	new Vue({
+		el : "#bg-wrap",
+		data : {
+			isgoReg : false,
+			number : 0
+		}
+	})
+</script>

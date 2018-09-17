@@ -1,0 +1,367 @@
+@charset 'utf-8';
+ul,li{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+/*商城页-开始*/
+#b-box{
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	display: flex;
+	flex-direction: column;
+}
+ .carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+  .product-wrap{
+  	overflow-x:hidden;
+  	position: relative;
+  	height: 100%;
+  }
+.product-box{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: -1000px;
+	left: 0;
+	transition: all 1s;
+}
+.toBottom{
+	top: 0;
+	transform: translateX(0);
+	-ms-transform: translateX(0); /* IE 9 */
+	-webkit-transform: translateX(0); /* Safari and Chrome */
+	transition: all 1s;
+}
+.productList{
+	top: 0;
+}
+.productList>li:nth-child(n){
+	transform: translateX(-1000px);
+	-ms-transform: translateX(-1000px); /* IE 9 */
+	-webkit-transform: translateX(-1000px); /* Safari and Chrome */
+	transition: all 1s;
+}
+.productList>li:nth-child(2n){
+	transform: translateX(1000px);
+	-ms-transform: translateX(1000px); /* IE 9 */
+	-webkit-transform: translateX(1000px); /* Safari and Chrome */
+	transition: all 1s;
+}	
+.product-box>li{
+	height: 130px;
+	overflow: hidden;
+
+	transform: translateX(0px);
+	-ms-transform: translateX(0px); /* IE 9 */
+	-webkit-transform: translateX(0px); /* Safari and Chrome */
+	transition: transform 1s;
+}
+.pro-item {
+	width: 100%;
+}
+.pro-item img{
+	width: 100%;
+	height: 100%;
+}
+.pro-title{
+	display: block;
+}
+.pro-ctrl{
+	width: 40px;
+	height: 166px;
+	padding: 5px 10px;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -83px;
+	z-index: 1000;
+	background: rgba(0,0,0,0.5);
+}
+.pro-nav{
+	width: 100%;
+	height: 44%;
+	background: rgba(0,0,0,0.8);
+	position: fixed;
+	bottom: 0;
+	left: 400px;
+	text-align: center;
+	z-index: 1000;
+	color: #fff;
+	transition: left 1s;
+}
+.gonav{
+	left: 0;
+	transition: left 1s;
+}
+.pro-nav a{
+	display: block;
+	color: #fff;
+}
+/*商城页-结束*/
+
+/*登录&注册-开始*/
+.bg-wrap{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/bg-1.jpg) no-repeat 50% 50%;
+	background-size: cover;
+}
+.login-box{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.login-content{
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.login-content li{
+	color: #fff;
+	border-radius: 4px;
+	overflow: hidden;
+}
+.login-content img{
+	width: 80px;
+	height: 80px;
+	box-shadow: 0 0 10px #000;
+	margin-top: 5rem;
+	border: 1px solid #013C68;
+	padding: 4px;
+	border-radius: 4px;
+}
+.login-content input{
+	background: transparent;
+	outline: none;
+	border: none;
+	color: #fff;
+	font-size: 14px;
+}
+
+/*注册*/
+.register{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 600px;
+	z-index: 2;
+	transition: left 1s;
+}
+.goReg{
+	left: 0;
+	transition: left 1s;
+}
+.form-title{
+	font-size: 30px;
+	margin-top: 4rem;
+	color: #777;
+}
+.form-content{
+	position: relative;
+	height: 60%;
+	overflow: hidden;
+}
+.form-item{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: -600px;
+	z-index: 1;
+	transition: all 1s;
+}
+.goFi{
+	left: 0;
+	transition: all 1s;
+}
+.toTop{
+	left: 0;
+	top: -500px;
+	transition: all 1s;
+}
+.next{
+	display: flex;
+	justify-content: flex-end;
+}
+/*登录&注册-结束*/
+
+/*个人中心-开始*/
+.center-wrap{
+	position: absolute;
+	background: url(img/bg-1.jpg) no-repeat 50% 50%;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.head-box{
+	overflow: hidden;
+	position: relative;
+	box-shadow: 0 0 20px #000;
+	height: 20%;
+}
+.head-img{
+	overflow: hidden;
+	display: flex;
+	height: 100%;
+}
+.head-img img{
+	width: 12rem;
+	height: 100%;
+}
+.head-nav{
+	position: absolute;
+	right: -35%;
+	top: 0;
+	width: 35%;
+	height: 100%;
+	text-align: center;
+	box-sizing:border-box;	
+	transition: right 0.8s;
+}
+.ghnav{
+	right: 0;
+	transition: right 0.8s;
+}
+.head-nav div{
+	padding: 0.5rem 0;
+}
+.head-nav .back{
+	width: 30px;
+	height: 30px;
+	line-height: 16px;
+	position: absolute;
+	top: 50%;
+	left: -30px;
+	margin-top: -15px;
+	text-align: center;
+	border-radius: 4px 0 0 4px;
+}
+
+.center-item{
+	position: relative;
+	font-size: 14px;
+	overflow: hidden;
+}
+.c-item-warp{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	transform: translateX(-25rem);
+	-ms-transform: translateX(-25rem); /* IE 9 */
+	-webkit-transform: translateX(-25rem); /* Safari and Chrome */
+	transition: transform 1s;
+}
+.ciw{
+	transform: translateX(0);
+	-ms-transform: translateX(0); /* IE 9 */
+	-webkit-transform: translateX(0); /* Safari and Chrome */
+	transition: transform 1s;
+}
+.center-item span{
+	display: inline-block;
+	width: 30%;
+	text-align: right;
+	margin-right: 10px;
+}
+.c-item-title{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+/*模态框*/
+.modal {
+    position: fixed;
+    bottom: 0!important;
+    top: auto;	
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    outline: 0;
+}
+.modal-body{
+	overflow: auto;
+	height: 15rem;
+}
+/*个人中心-结束*/
+
+
+/*公共样式*/
+.flex-1{
+	flex:1;
+}
+.flex-1-2{
+	flex: 1.2;
+}
+.font-12{
+	font-size: 12px;
+}
+/*padding*/
+.p-l-10{
+	padding-left: 10px;
+}
+/*margin*/
+.mt-6{
+	margin-top: 5rem;
+}
+.mt-2-5{
+	margin-top: 0.7rem;
+}
+/*border*/
+.line-b{
+	border-bottom: 1px solid #444;
+}
+/*background*/
+.bg-1{
+	background: rgba(0,0,0,0.8);
+}
+.bg-2{
+	background: rgba(255,255,255,0.1);
+}
+.bg-3{
+	background: rgba(255,255,255,0.3);
+}
+/*color*/
+.color-1{
+	color: #fff;
+}
+.color-2{
+	color: #ccc;
+}
+/*font*/
+.font-1{
+	font-size: 12px;
+}
+.font-2{
+	font-size: 14px;
+}
+.font-3{
+	font-size: 16px;
+}
+.font-5{
+	font-size: 20px;
+}
+.font-6{
+	font-size: 30px;
+}

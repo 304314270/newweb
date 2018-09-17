@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>商城</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://at.alicdn.com/t/font_677124_bzid8kskqjs.css">
+	<link rel="stylesheet" href="base.css">
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div id="b-box">
+
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+	<!-- 轮播图片 -->
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<img src="http://img1.imgtn.bdimg.com/it/u=585953905,2209736100&fm=26&gp=0.jpg">
+		</div>
+		<div class="carousel-item">
+			<img src="http://img2.imgtn.bdimg.com/it/u=1207274172,39982184&fm=15&gp=0.jpg">
+		</div>
+		<div class="carousel-item">
+			<img src="http://img4.imgtn.bdimg.com/it/u=2400711049,2244200365&fm=26&gp=0.jpg">
+		</div>
+	</div>
+
+	<!-- 左右切换按钮 -->
+	<a class="carousel-control-prev" href="#demo" data-slide="prev">
+		<span class="carousel-control-prev-icon"></span>
+	</a>
+	<a class="carousel-control-next" href="#demo" data-slide="next">
+		<span class="carousel-control-next-icon"></span>
+	</a>
+
+</div>
+<!-- 商品列表 -->
+<div class="product-wrap">
+	<ul class="product-box" :class="[number == 0 ? 'toBottom' : one()]">
+		<li class="d-flex pro-item mt-1">
+			<div class="flex-1-2">
+				<img src="http://img0.imgtn.bdimg.com/it/u=1949115462,1443108372&fm=26&gp=0.jpg">
+			</div>
+			<div class="flex-1 pl-2">
+				<span class="pro-title">华为第七代</span>
+				<span class="font-12 text-secondary">彩屏触控、蓝牙通话、通过蓝牙耳机听音乐、联系人（快速拨号）、来电识别/来电静音</span>
+				<em class="text-danger">¥999</em>
+			</div>
+		</li>
+		<li class="d-flex pro-item mt-1">
+			<div class="flex-1 pl-2">
+				<span class="pro-title">华为第七代</span>
+				<span class="font-12 text-secondary">彩屏触控、蓝牙通话、通过蓝牙耳机听音乐、联系人（快速拨号）、来电识别/来电静音</span>
+				<em class="text-danger">¥999</em>
+			</div>
+			<div class="flex-1-2">
+				<img src="http://img0.imgtn.bdimg.com/it/u=1949115462,1443108372&fm=26&gp=0.jpg">
+			</div>
+		</li>
+		<li class="d-flex pro-item mt-1">
+			<div class="flex-1-2">
+				<img src="http://img0.imgtn.bdimg.com/it/u=1949115462,1443108372&fm=26&gp=0.jpg">
+			</div>
+			<div class="flex-1 pl-2">
+				<span class="pro-title">华为第七代</span>
+				<span class="font-12 text-secondary">彩屏触控、蓝牙通话、通过蓝牙耳机听音乐、联系人（快速拨号）、来电识别/来电静音</span>
+				<em class="text-danger">¥999</em>
+			</div>
+		</li>
+		<li class="d-flex pro-item mt-1">
+			<div class="flex-1 pl-2">
+				<span class="pro-title">华为第七代</span>
+				<span class="font-12 text-secondary">彩屏触控、蓝牙通话、通过蓝牙耳机听音乐、联系人（快速拨号）、来电识别/来电静音</span>
+				<em class="text-danger">¥999</em>
+			</div>
+			<div class="flex-1-2">
+				<img src="http://img0.imgtn.bdimg.com/it/u=1949115462,1443108372&fm=26&gp=0.jpg">
+			</div>
+		</li>
+	</ul>
+	<ul class="product-box" :class="[number == 1 ? 'toBottom' : two()]">
+		<li class="d-flex pro-item mt-1">
+			<div class="flex-1-2">
+				<img src="http://img0.imgtn.bdimg.com/it/u=1949115462,1443108372&fm=26&gp=0.jpg">
+			</div>
+			<div class="flex-1 pl-2">
+				<span class="pro-title">华为第七代</span>
+				<span class="font-12 text-secondary">彩屏触控、蓝牙通话、通过蓝牙耳机听音乐、联系人（快速拨号）、来电识别/来电静音</span>
+				<em class="text-danger">¥999</em>
+			</div>
+		</li>
+		<li class="d-flex pro-item mt-1">
+			<div class="flex-1 pl-2">
+				<span class="pro-title">华为第七代</span>
+				<span class="font-12 text-secondary">彩屏触控、蓝牙通话、通过蓝牙耳机听音乐、联系人（快速拨号）、来电识别/来电静音</span>
+				<em class="text-danger">¥999</em>
+			</div>
+			<div class="flex-1-2">
+				<img src="http://img0.imgtn.bdimg.com/it/u=1949115462,1443108372&fm=26&gp=0.jpg">
+			</div>
+		</li>
+		<li class="d-flex pro-item mt-1">
+			<div class="flex-1-2">
+				<img src="http://img0.imgtn.bdimg.com/it/u=1949115462,1443108372&fm=26&gp=0.jpg">
+			</div>
+			<div class="flex-1 pl-2">
+				<span class="pro-title">华为第七代</span>
+				<span class="font-12 text-secondary">彩屏触控、蓝牙通话、通过蓝牙耳机听音乐、联系人（快速拨号）、来电识别/来电静音</span>
+				<em class="text-danger">¥999</em>
+			</div>
+		</li>
+		<li class="d-flex pro-item mt-1">
+			<div class="flex-1 pl-2">
+				<span class="pro-title">华为第七代</span>
+				<span class="font-12 text-secondary">彩屏触控、蓝牙通话、通过蓝牙耳机听音乐、联系人（快速拨号）、来电识别/来电静音</span>
+				<em class="text-danger">¥999</em>
+			</div>
+			<div class="flex-1-2">
+				<img src="http://img0.imgtn.bdimg.com/it/u=1949115462,1443108372&fm=26&gp=0.jpg">
+			</div>
+		</li>
+	</ul>
+	<ul class="product-box" :class="[number == 2 ? 'toBottom' : three()]">
+		<li class="d-flex pro-item mt-1">
+			<div class="flex-1-2">
+				<img src="http://img0.imgtn.bdimg.com/it/u=1949115462,1443108372&fm=26&gp=0.jpg">
+			</div>
+			<div class="flex-1 pl-2">
+				<span class="pro-title">华为第七代</span>
+				<span class="font-12 text-secondary">彩屏触控、蓝牙通话、通过蓝牙耳机听音乐、联系人（快速拨号）、来电识别/来电静音</span>
+				<em class="text-danger">¥999</em>
+			</div>
+		</li>
+		<li class="d-flex pro-item mt-1">
+			<div class="flex-1 pl-2">
+				<span class="pro-title">华为第七代</span>
+				<span class="font-12 text-secondary">彩屏触控、蓝牙通话、通过蓝牙耳机听音乐、联系人（快速拨号）、来电识别/来电静音</span>
+				<em class="text-danger">¥999</em>
+			</div>
+			<div class="flex-1-2">
+				<img src="http://img0.imgtn.bdimg.com/it/u=1949115462,1443108372&fm=26&gp=0.jpg">
+			</div>
+		</li>
+		<li class="d-flex pro-item mt-1">
+			<div class="flex-1-2">
+				<img src="http://img0.imgtn.bdimg.com/it/u=1949115462,1443108372&fm=26&gp=0.jpg">
+			</div>
+			<div class="flex-1 pl-2">
+				<span class="pro-title">华为第七代</span>
+				<span class="font-12 text-secondary">彩屏触控、蓝牙通话、通过蓝牙耳机听音乐、联系人（快速拨号）、来电识别/来电静音</span>
+				<em class="text-danger">¥999</em>
+			</div>
+		</li>
+		<li class="d-flex pro-item mt-1">
+			<div class="flex-1 pl-2">
+				<span class="pro-title">华为第七代</span>
+				<span class="font-12 text-secondary">彩屏触控、蓝牙通话、通过蓝牙耳机听音乐、联系人（快速拨号）、来电识别/来电静音</span>
+				<em class="text-danger">¥999</em>
+			</div>
+			<div class="flex-1-2">
+				<img src="http://img0.imgtn.bdimg.com/it/u=1949115462,1443108372&fm=26&gp=0.jpg">
+			</div>
+		</li>
+	</ul>
+	<ul class="product-box" :class="[number == 3 ? 'toBottom' : four()]">
+		<li class="d-flex pro-item mt-1">
+			<div class="flex-1-2">
+				<img src="http://img0.imgtn.bdimg.com/it/u=1949115462,1443108372&fm=26&gp=0.jpg">
+			</div>
+			<div class="flex-1 pl-2">
+				<span class="pro-title">华为第七代</span>
+				<span class="font-12 text-secondary">彩屏触控、蓝牙通话、通过蓝牙耳机听音乐、联系人（快速拨号）、来电识别/来电静音</span>
+				<em class="text-danger">¥999</em>
+			</div>
+		</li>
+		<li class="d-flex pro-item mt-1">
+			<div class="flex-1 pl-2">
+				<span class="pro-title">华为第七代</span>
+				<span class="font-12 text-secondary">彩屏触控、蓝牙通话、通过蓝牙耳机听音乐、联系人（快速拨号）、来电识别/来电静音</span>
+				<em class="text-danger">¥999</em>
+			</div>
+			<div class="flex-1-2">
+				<img src="http://img0.imgtn.bdimg.com/it/u=1949115462,1443108372&fm=26&gp=0.jpg">
+			</div>
+		</li>
+		<li class="d-flex pro-item mt-1">
+			<div class="flex-1-2">
+				<img src="http://img0.imgtn.bdimg.com/it/u=1949115462,1443108372&fm=26&gp=0.jpg">
+			</div>
+			<div class="flex-1 pl-2">
+				<span class="pro-title">华为第七代</span>
+				<span class="font-12 text-secondary">彩屏触控、蓝牙通话、通过蓝牙耳机听音乐、联系人（快速拨号）、来电识别/来电静音</span>
+				<em class="text-danger">¥999</em>
+			</div>
+		</li>
+		<li class="d-flex pro-item mt-1">
+			<div class="flex-1 pl-2">
+				<span class="pro-title">华为第七代</span>
+				<span class="font-12 text-secondary">彩屏触控、蓝牙通话、通过蓝牙耳机听音乐、联系人（快速拨号）、来电识别/来电静音</span>
+				<em class="text-danger">¥999</em>
+			</div>
+			<div class="flex-1-2">
+				<img src="http://img0.imgtn.bdimg.com/it/u=1949115462,1443108372&fm=26&gp=0.jpg">
+			</div>
+		</li>
+	</ul>
+	
+
+</div>
+<!-- 上下页操作 -->
+<div class="pro-ctrl">
+	<div @click="number>0 ? number-- : ''">上一页</div>
+	<div class="mt-2" @click="number++">下一面</div>
+	<h6 class="mt-2-5" v-on:click="isgonav = true"><i class="iconfont icon-shuangzuojiantou-"></i></h6>
+</div>
+<!-- 导航 -->
+<nav class="pro-nav" :class="{ gonav : isgonav }">
+	<h5 class="mb-3 pt-2 pb-2 line-b"><i class="iconfont icon-shuangyoujiantou-" v-on:click="isgonav=false"></i></h5 >
+	<div><a  class="pt-2 pb-2"href="###">商城</a></div>	
+	<div><a class="pt-2 pb-2" href="login.html">登录 / 注册</a></div>
+	<div><a class="pt-2 pb-2" href="center.html">个人中心</a></div>
+</nav>
+
+
+
+</div>
+</body>
+</html>
+<script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+<script>
+	new Vue({
+		el : "#b-box",
+		data : {
+			isgonav : false,
+			isPl : false,
+			number : 0
+		},
+		methods : {
+			one : function(){
+				if (this.number == 1) {
+					return "productList"
+				}
+			},
+			two : function(){
+				if (this.number == 2) {
+					return "productList"
+				}
+			},
+			three : function(){
+				if (this.number == 3) {
+					return "productList"
+				}
+			},
+			four : function(){
+				if (this.number == 4) {
+					return "productList"
+				}
+			}
+		}
+	})
+</script>
